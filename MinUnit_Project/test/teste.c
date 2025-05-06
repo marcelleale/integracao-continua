@@ -68,7 +68,7 @@ CT = {
 
 //Chamada das bibliotecas
 #include "../test/minunit-master/minunit.h"  
-#include "../../src/bilhete.h" 
+#include "../src/bilhete.h" 
 
 
 int tests_run = 0;
