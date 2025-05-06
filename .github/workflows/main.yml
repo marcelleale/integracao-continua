@@ -1,0 +1,30 @@
+name: Integração Contínua com Minunit
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Fazer o checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Preparar o ambiente para rodar aplicações em C
+    - name: Install build essentials
+      run: sudo apt-get install build-essential
+
+    # Compilar o projeto
+    - name: Build the project
+      run: gcc -o unitario MinUnit_Project/test/teste.c
+
+    # Executar o teste
+    - name: Run unit tests
+      run: ./unitario
