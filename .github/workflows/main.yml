@@ -23,7 +23,8 @@ jobs:
 
     # Compilar o projeto
     - name: Build the project
-      run: gcc -o unitario MinUnit_Project/test/teste.c
+      run: gcc -I MinUnit_Project/src -o unitario MinUnit_Project/test/teste.c MinUnit_Project/src/bilhete.c
+
 
     # Executar o teste
     - name: Run unit tests
