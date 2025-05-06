@@ -67,7 +67,7 @@ CT = {
 */
 
 //Chamada das bibliotecas
-#include "minunit.h" 
+#include "../test/minunit-master/minunit.h"  
 #include "../../src/bilhete.h" 
 
 
